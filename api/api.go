@@ -13,7 +13,7 @@ import (
 // Callback function config.
 //
 // Request sends an HTTP request to the given URL.
-func Request(ctx context.Context, payload io.Reader, method, url string, header map[string]string) Response {
+func Request(ctx context.Context, payload io.Reader, method, url string, header map[string]string) *Response {
 	var curl string
 
 	req, err := createRequest(ctx, url, method, payload)
